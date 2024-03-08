@@ -23,6 +23,17 @@ public class CustomList extends ArrayAdapter<City> {
         this.context = context;
     }
 
+    private CustomList list;
+    /**
+     * create a mocklist for my citylist
+     * @return
+     */
+    public CustomList MockCityList(){
+        list = new CustomList(null,new ArrayList<>());
+        return list;
+    }
+
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
